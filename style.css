@@ -1,0 +1,166 @@
+    
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+    /* Css Variables */
+    :root {
+      /* vd = very dark, l = light, m = moderate */
+      --m-violet: hsl(263, 55%, 52%);
+      --vd-grayish-blue: hsl(217, 19%, 35%);
+      --vd-blackish-blue: hsl(219, 29%, 14%);
+      --white: hsl(0, 0%, 100%);
+      --l-gray: hsl(0, 0%, 81%);
+      --l-grayish-blue: hsl(210, 46%, 95%);
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    body {
+      background-color: var(--l-grayish-blue);
+    }
+    /* Declaration of css grid */
+    main {
+      width: 85%;
+      display: grid;
+      gap: 1.5em;
+    }
+    /*align-self, To stop image from stretching */
+    img {
+      width: 35px;
+      border-radius: 100px;
+      align-self: center;
+      border: 2px solid hsla(0, 0%, 81%, 0.497);
+      ;
+    }
+    /* profile picture and it's caption(in testimonial section) */
+    figure {
+      display: flex;
+      gap: 15px;
+    }
+
+    figcaption {
+      align-self: center;
+    }
+    /* Gave testimonial section a curve */
+    .testimonial-section {
+      padding: 1.5em 2em;
+      border-radius: 8px;
+    }
+
+    /*Declared Quotation image in first section and set its position and size. Also declared colors of all the testimonial sections */
+    .testimonial-section:first-child {
+      background-image: url(./images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position: 87% 0;
+      background-color: var(--m-violet);
+    }
+
+    .testimonial-section:nth-child(3),
+    .testimonial-section:nth-child(5) {
+      background-color: white;
+    }
+
+    .testimonial-section:nth-child(2) {
+      background-color: var(--vd-grayish-blue);
+    }
+
+    .testimonial-section:nth-child(4) {
+      background-color: var(--vd-blackish-blue);
+    }
+    /* This section of code defines the name and status (verified). Gave class --white to change some names to white and rest black */
+    .user-name {
+      color: var(--vd-blackish-blue);
+
+    }
+    
+    .user-status {
+      color: hsla(217, 30%, 14%, 0.500);
+    }
+
+    .user-name--white {
+      color: var(--l-grayish-blue);
+    }
+
+    .user-status--white {
+      color: hsla(210, 46%, 95%, 0.500);
+    }
+    /* Colors of headings and paragraphs inside testimonial sections(also given them -white class to change some headings to white and rest black ) */
+    h2 {
+      color: var(--vd-grayish-blue);
+    }
+
+    p {
+      color: hsla(217, 30%, 14%, 0.700);
+    }
+
+    .h2-white {
+      color: var(--l-grayish-blue);
+    }
+
+    .p-white {
+      color: hsla(210, 46%, 95%, 0.700);
+    }
+
+    /* Adjusting font-sizing of paragraphs and headings */
+    h2,
+    p {
+      margin-top: 1em;
+
+    }
+
+    h2 {
+      font-size: 1.19rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      line-height: 1.5em;
+    }
+    /* This style is for tablet design. This section of code declares 2 columns of equal width and spans the bottom section to 2 columns*/
+    @media(min-width:650px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-kira {
+        grid-column: span 2;
+      }
+    }
+    /* This section centers main section in veiwport. It also changes number of columns to four */
+    @media(min-width:1200px) {
+
+      html,
+      body {
+        height: 100vh;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* Declaring no. of columns */
+      main {
+       
+        margin: auto;
+        width: 70%;
+        grid-template-columns: repeat(4, 1fr);
+
+      }
+      /* spans the first testimonial section to 2 columns */
+      .section-daniel {
+        grid-column: span 2;
+      }
+      /* Changes the row and column of last section.Row starts and ends at line 1 and 3. And column starts at line 4 to 5 */
+      .section-kira {
+        grid-column: 4/5;
+        grid-row: 1/3;
+      }
+      /* Spans fourth section */
+      .section-pat {
+        grid-column: span 2;
+      }
+    }
