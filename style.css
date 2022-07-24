@@ -142,11 +142,11 @@
         justify-content: center;
         align-items: center;
       }
-      /* Declaring no. of columns. Also changed width to grid-container to better fit original design*/
+      /* Declaring no. of columns */
       main {
        
         margin: auto;
-        width: 75%;
+        width: 78%;
         grid-template-columns: repeat(4, 1fr);
 
       }
@@ -162,5 +162,8 @@
       /* Spans fourth section */
       .section-pat {
         grid-column: span 2;
+      }
+      .testimonial-section{
+        box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 0.150);
       }
     }
