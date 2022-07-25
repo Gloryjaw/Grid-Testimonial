@@ -27,6 +27,7 @@
       display: grid;
       gap: 1.5em;
       margin:auto;
+      padding:2em;
     }
     /*align-self, To stop image from stretching */
     img {
@@ -145,7 +146,7 @@
       }
       /* Declaring no. of columns */
       main {
-       
+        padding:0;
         margin: auto;
         width: 78%;
         grid-template-columns: repeat(4, 1fr);
