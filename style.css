@@ -27,7 +27,7 @@
       display: grid;
       gap: 1.5em;
       margin:auto;
-      padding:2em;
+      padding:2em 0;
     }
     /*align-self, To stop image from stretching */
     img {
