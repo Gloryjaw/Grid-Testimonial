@@ -26,6 +26,7 @@
       width: 85%;
       display: grid;
       gap: 1.5em;
+      margin:auto;
     }
     /*align-self, To stop image from stretching */
     img {
